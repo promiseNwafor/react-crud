@@ -2,16 +2,14 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
-function User() {
+function User({ deleteUser }) {
   const [user, setUser] = useState(null);
 
   const location = useLocation();
 
   useEffect(() => {
     setUser(location.state.user);
-    console.log(user);
-  }, [user]);
+  }, [location.state.user]);
 
   return (
     <div className="Cover">
@@ -30,7 +28,7 @@ function User() {
                   <th>Phone</th>
                   <th>Gender</th>
                   <th>Age</th>
-                  <th>Admin</th>
+                  <th>Role</th>
                 </tr>
               </thead>
               <tbody>
@@ -47,8 +45,13 @@ function User() {
               </tbody>
             </table>
             <div className="sec">
-              <p>edit</p>
-              <p>delete</p>
+              <p
+                onClick={() => {
+                  deleteUser(`/api/user/${user.id}`);
+                }}
+              >
+                Delete user
+              </p>
               <p>
                 <Link
                   to={{

@@ -24,43 +24,64 @@ function Users({ users, deleteUser }) {
                     <th>Phone</th>
                     <th>Gender</th>
                     <th>Age</th>
-                    <th>Admin</th>
+                    <th>Role</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {users.data && users.data.map((user) => {
-                    return (
-                      <tr
-                        onMouseOver={() => setHide(false)}
-                        onMouseOut={() => setHide(true)}
-                        key={user.id}
-                      >
-                        <td>{user.name}</td>
-                        <td>{user.email}</td>
-                        <td>{user.phone_no}</td>
-                        <td>{user.sex}</td>
-                        <td>{user.age}</td>
-                        <td>{user.role}</td>
-                        <td>
-                          <p className={hide && "hide"}>
+                  {users.data &&
+                    users.data.map((user) => {
+                      return (
+                        <tr
+                          onMouseOver={() => setHide(false)}
+                          onMouseOut={() => setHide(true)}
+                          key={user.id}
+                        >
+                          <td>{user.name}</td>
+                          <td>{user.email}</td>
+                          <td>{user.phone_no}</td>
+                          <td>{user.sex}</td>
+                          <td>{user.age}</td>
+                          <td>{user.role}</td>
+                          <td>
+                            <p className={hide && "hide"}>
                               <Link
-                              to={{
-                                pathname: `/user/${user.id}`,
-                                state: { user },
+                                to={{
+                                  pathname: `/user/${user.id}`,
+                                  state: { user },
+                                }}
+                              >
+                                <i className="fa fa-eye" aria-hidden="true"></i>
+                              </Link>
+                            </p>
+                          </td>
+                          <td>
+                            <p className={hide && "hide"}>
+                              <Link
+                                to={{
+                                  pathname: `/updateUser`,
+                                  state: { user },
+                                }}
+                              >
+                                <i
+                                  className="fa fa-pencil"
+                                  aria-hidden="true"
+                                ></i>
+                              </Link>
+                            </p>
+                          </td>
+                          <td>
+                            <p
+                              onClick={() => {
+                                deleteUser(`/api/user/${user.id}`);
                               }}
+                              className={hide && "hide"}
                             >
-                              view user</Link>
-                              </p>
-                        </td>
-                        <td>
-                          <p className={hide && "hide"}>edit</p>
-                        </td>
-                        <td>
-                          <p onClick={() => {deleteUser(`/api/user/${user.id}`)}} className={hide && "hide"}>delete</p>
-                        </td>
-                      </tr>
-                    );
-                  })}
+                              <i className="fa fa-trash" aria-hidden="true"></i>
+                            </p>
+                          </td>
+                        </tr>
+                      );
+                    })}
                 </tbody>
               </table>
             )}

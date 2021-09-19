@@ -269,8 +269,8 @@
     }
 
     tbody tr:hover {
-        background-color: rgb(109, 108, 108);
-        color: #efefef;
+        background-color: rgb(206, 204, 204);
+        color: #383636;
     }
     
 
@@ -280,10 +280,33 @@
             padding-top: 1rem;
         }
       }
+.sec{
+  display: flex;
+  margin: 2rem auto;
+  width: 50%;
+  justify-content: space-between;
+}
+.sec p{
+  background-color: rgb(39, 39, 41);
+  color: #efefef;
+  width: 130px;
+  padding: 1rem 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+  .hide{
+      opacity: 0;
+  }
 
-      .hide{
-          opacity: 0;
-      }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  td p {
+    cursor: pointer;
+  }
+
     
     
     

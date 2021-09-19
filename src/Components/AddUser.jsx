@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
-
-function AddUser({apiFetch}) {
+function AddUser({ apiFetch }) {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(null);
@@ -10,29 +8,24 @@ function AddUser({apiFetch}) {
   const [sex, setSex] = useState(null);
   const [age, setAge] = useState(null);
   const [role, setRole] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [passwordShown, setPasswordShown] = useState(false);
 
-
-    const data = {
-      name: fullname,
-      email,
-      phone_no: phone,
-      password,
-      sex,
-      age,
-      role,
-    };
-
+  const data = {
+    name: fullname,
+    email,
+    phone_no: phone,
+    password,
+    sex,
+    age,
+    role,
+  };
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
 
-
   return (
     <div className="Auth">
-    
       <div className="Box">
         <div className="wrap">
           <div className="h4">
@@ -107,14 +100,14 @@ function AddUser({apiFetch}) {
             <hr />
             <div className="Input password">
               <input
-                value= "Admin"
+                value="Admin"
                 name="role"
                 onChange={(e) => setRole(e.target.value)}
                 type="radio"
               />
               <label for="Admin">Admin</label>
               <input
-                value= "user"
+                value="user"
                 name="role"
                 onChange={(e) => setRole(e.target.value)}
                 type="radio"
@@ -122,17 +115,15 @@ function AddUser({apiFetch}) {
               <label for="user">User</label>
             </div>
           </form>
-          {loading ? (
-            <center>
-              <h2>Loading</h2>
-            </center>
-          ) : (
-            <div className="Btn">
-              <button onClick= {() => apiFetch('/api/user', data, '/')} type="submit">
-                ADD
-              </button>
-            </div>
-          )}
+
+          <div className="Btn">
+            <button
+              onClick={() => apiFetch("/api/user", data, "/")}
+              type="submit"
+            >
+              ADD
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,26 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-function Login({apiFetch}) {
+
+function Login({ apiFetch }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(null);
   const [passwordShown, setPasswordShown] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const data = {
     email,
-    password
-  };
-  
-
-  const resetInput = () => {
-    setEmail("");
-    setPassword("");
+    password,
   };
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
-
 
   return (
     <div className="Auth">
@@ -52,24 +45,22 @@ function Login({apiFetch}) {
               ></i>
             </div>
           </form>
-          {loading ? (
-            <center>
-              <h2>Loading</h2>
-            </center>
-          ) : (
-            <div className="Btn">
-              <button onClick={() => apiFetch('/api/auth/login', data, '/')} type="submit">
-                LOGIN
-              </button>
-            </div>
-          )}
+
+          <div className="Btn">
+            <button
+              onClick={() => apiFetch("/api/auth/login", data, "/")}
+              type="submit"
+            >
+              LOGIN
+            </button>
+          </div>
         </div>
       </div>
       <div className="foot">
         <p>
-            <Link to='/signup'>Register</Link>
-            <Link to='/forgotPassword'>Forgot password</Link>
-            {/* <Link to='/resetPassword'>Reset password</Link> */}
+          <Link to="/signup">Sign up</Link>
+          {/* <Link to='/forgotPassword'>Forgot password</Link> */}
+          {/* <Link to='/resetPassword'>Reset password</Link> */}
         </p>
       </div>
     </div>

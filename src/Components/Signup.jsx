@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
-function Signup({apiFetch}) {
+function Signup({ apiFetch }) {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(null);
@@ -11,33 +10,22 @@ function Signup({apiFetch}) {
   const [sex, setSex] = useState(null);
   const [age, setAge] = useState(null);
   const [role, setRole] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [passwordShown, setPasswordShown] = useState(false);
 
-
-    const data = {
-      name: fullname,
-      email,
-      phone_no: phone,
-      password,
-      password_again: passwordAgain,
-      sex,
-      age,
-      role,
-    };
-
-
-
-  const resetInput = () => {
-    setFullname("");
-    setEmail("");
-    setPassword("");
+  const data = {
+    name: fullname,
+    email,
+    phone_no: phone,
+    password,
+    password_again: passwordAgain,
+    sex,
+    age,
+    role,
   };
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
-
 
   return (
     <div className="Auth">
@@ -129,14 +117,14 @@ function Signup({apiFetch}) {
             <hr />
             <div className="Input password">
               <input
-                value= "Admin"
+                value="Admin"
                 name="role"
                 onChange={(e) => setRole(e.target.value)}
                 type="radio"
               />
               <label for="Admin">Admin</label>
               <input
-                value= "user"
+                value="user"
                 name="role"
                 onChange={(e) => setRole(e.target.value)}
                 type="radio"
@@ -144,22 +132,20 @@ function Signup({apiFetch}) {
               <label for="user">User</label>
             </div>
           </form>
-          {loading ? (
-            <center>
-              <h2>Loading</h2>
-            </center>
-          ) : (
-            <div className="Btn">
-              <button onClick= {() => apiFetch('/api/auth/register', data, '/')} type="submit">
-                SIGN UP
-              </button>
-            </div>
-          )}
+          <div className="Btn">
+            <button
+              onClick={() => apiFetch("/api/auth/register", data, "/")}
+              type="submit"
+            >
+              SIGN UP
+            </button>
+          </div>
         </div>
       </div>
       <div className="foot">
-        <p>Already have an account?
-            <Link to='/login'>Login</Link>
+        <p>
+          Already have an account?
+          <Link to="/login">Login</Link>
         </p>
       </div>
     </div>
