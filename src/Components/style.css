@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Nav{
+    overflow: hidden;
+    height: 70px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 5px 5px 20px 0.5px rgb(197, 197, 197);
+    overflow: visible;
+}
+
+.Nav .left, .Nav .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+    /* width: 50%; */
+    color: #0c63e6;
+}
+
+.Nav .right{
+    width: 160px;
+}
+
+.Nav .logo, .Nav .add, .Nav .logout{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    margin: auto;
+}
+
+.dropdown p{
+   position: absolute;
+   top: 20;
+   left: 20;
+   background: rgba(247, 244, 244, 0.4);
+   color: #343435;
+   border-radius: 5px;
+   padding: 0.2rem;
+   font-size: 15px;
+   font-weight: 500;
+  }
+
+.Nav .logo{
+    width: 40px;
+    height: 50px;
+}
+
+.Nav .left h3{
+    margin-left: 2rem;
+}
+
+
+@media screen and (max-width: 520px) {
+    .Nav h3{
+       display: none;
+    }
+    .Nav .left, .Nav .right{
+        padding: 0rem;
+        width: 200px;
+        color: #0c63e6;
+    }
+    
+    .Nav .right{
+        width: 100px;
+    }
+  }
+
+  .Auth .h4 {
+    font-family: monospace;
+    padding-top: 1rem;
+    font-size: 24px;
+    color: #0c63e6;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Auth .logo {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Auth .logo img {
+    width: 70px;
+  }
+  
+  .Auth {
+    min-height: 100vh;
+    width: 100vw;
+    background: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .Auth .wrap {
+    width: 75%;
+    margin: auto;
+  }
+  
+  .Auth .wrap div {
+    margin: 2rem auto;
+  }
+  
+  .Auth .Box {
+    width: 420px;
+    min-height: 400px;
+    margin: 0;
+    box-shadow: 0px 0px 40px #00000029;
+    border-radius: 38px;
+    opacity: 1;
+  }
+  
+  .Auth img {
+    width: 40%;
+  }
+  
+  .Auth input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(122, 120, 120);
+    padding: 0.5rem;
+  }
+  
+  .Btn {
+    width: 150px;
+    background: #0c63e6;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 13px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  
+  button {
+    background: inherit;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  /* .Loader{
+    height: 10;
+  } */
+  
+  .foot {
+    color: #0c63e6;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .foot a{
+    color: #2261c0;
+    margin-left: .3rem;
+  }
+  
+  .password {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .password i {
+    color: rgb(99, 96, 96);
+    border-bottom: 1px solid gray;
+  }
+  
+  @media screen and (max-width: 520px) {
+      .Auth{
+         flex-direction: column-reverse;
+      }
+      .Auth .logo img {
+          height: 70px;
+        }
+      .Auth .bg{
+         width: 100%;
+      }
+      .Auth .Box {
+          width: 350px;
+          box-shadow: none;
+        }
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: inherit;
+    }
+    
+    .Analytics{
+        width: 100vw;
+        min-height: 100vh;
+        background: #efefef;
+        padding-top: 3rem;
+    }
+    
+    .Wrap .head{
+        display: flex;
+        justify-content: center;
+        color: #0c63e6;
+    }
+    
+    .Wrap .head{
+        justify-content: flex-start;
+    }
+    
+    .Wrap .displayName{
+        background: #efefef;
+    }
+    
+    .Wrap .displayName h3{
+        padding-top: 1.5rem;
+    }
+    
+    .Analytics .wrap{
+        width: 60%;
+        margin: auto;
+        padding: 3rem 4rem;
+        background: white;
+        border-radius: 15px;
+    }
+    
+    .Analytics .wrap{
+        min-width: 800px;
+        padding: 3rem;
+    }
+    
+    table{
+        margin-top: 2rem;
+        width: 100%;
+        text-align: left;
+        /* border-bottom: 1px solid gray; */
+    }
+    
+    td{
+        border-bottom: 2px solid #efefef;
+        padding: 1.5rem;
+        padding-left: 0;
+    }
+    
+    table small.blue{
+        color: #0c63e6;
+        cursor: pointer;
+    }
+
+    tbody tr:hover {
+        background-color: rgb(109, 108, 108);
+        color: #efefef;
+    }
+    
+
+    
+    @media screen and (max-width: 520px) {
+        .Analytics{
+            padding-top: 1rem;
+        }
+      }
+
+      .hide{
+          opacity: 0;
+      }
+    
+    
+    
+  

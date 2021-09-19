@@ -1,0 +1,192 @@
+{
+    "data": [
+        {
+            "_id": "6120ca7d90dd80007e51c0b1",
+            "fullName": "Gabriel Torres",
+            "email": "etienjames5@gmail.com",
+            "phone": "08108755903",
+            "password": "$2a$10$k2nLXDEsQ5JiGkIwPf0baONEOLtsoWmoBVrIr2yjMZ8OnRIraSisG",
+            "sex": "male",
+            "age": 56,
+            "isAdmin": true,
+            "date": "2021-08-21T09:42:21.303Z",
+            "__v": 0
+        },
+        {
+            "_id": "6122066ac07383007e2d8983",
+            "fullName": "Example",
+            "email": "adminexample@gmail.com",
+            "phone": "081800000000",
+            "password": "$2a$10$z8ns7NNMzNloQDtyIxH.6O.seeGY2NU5ZwdY9AIrrrpKA3z3itHOS",
+            "sex": "male",
+            "age": 56,
+            "date": "2021-08-22T08:10:18.335Z",
+            "__v": 0
+        },
+        {
+            "_id": "61221de7a49a8a007ef1d468",
+            "fullName": "Felix",
+            "email": "felixso@mail.com",
+            "phone": "081800000111",
+            "password": "$2a$10$wOjDeP28HCv5RAygtnoI.eINcUiFE/6KGoOdihOEdoQPSRmBok6ce",
+            "sex": "male",
+            "age": 55,
+            "date": "2021-08-22T09:50:31.092Z",
+            "__v": 0
+        },
+        {
+            "_id": "6123e2965f0fdc007e9ac46a",
+            "fullName": "Ajibade Femi",
+            "email": "femi@test.com",
+            "phone": "239402094",
+            "password": "$2a$10$YjqkwiblFdN/HmPs.nOSk.pXozGT8ZMNbJ9N0bYSMDW1Qjxydi3BW",
+            "sex": "male",
+            "age": 95,
+            "isAdmin": true,
+            "date": "2021-08-23T18:01:58.454Z",
+            "__v": 0
+        },
+        {
+            "_id": "6130fe1a10b4b7007e1cfb98",
+            "fullName": "Gabriel Torres",
+            "email": "aminigbo@gmail.com",
+            "phone": "08108755903",
+            "password": "$2a$10$OQl01zKaeWR8CBYP9d.R/OjWHe7FrhlHWPqbvDQLOH9N8PnBs4VeK",
+            "sex": "male",
+            "age": 56,
+            "isAdmin": true,
+            "date": "2021-09-02T16:38:50.451Z",
+            "__v": 0
+        },
+        {
+            "_id": "6131deaa461018007e76e33c",
+            "fullName": "bob post",
+            "email": "bob@gmail.com",
+            "phone": "07023123158",
+            "password": "$2a$10$guz8qX8f3Oa.c1kFQaNvGuJIpQG/e3Pia.VuOPgqmu7v8AKQe89zm",
+            "sex": "male",
+            "age": 31,
+            "isAdmin": false,
+            "date": "2021-09-03T08:36:58.734Z",
+            "__v": 0
+        },
+        {
+            "_id": "613385d70a1abc007efdf4ad",
+            "fullName": "Test User",
+            "email": "testuser@example.com",
+            "phone": "09099199191",
+            "password": "$2a$10$C.VS1AoBIIlhXbMp6WQTleZsvQ9o2ab59UmVh9MigA7Wad7ZcgUui",
+            "sex": "male",
+            "age": 19,
+            "isAdmin": false,
+            "date": "2021-09-04T14:42:31.070Z",
+            "__v": 0
+        },
+        {
+            "_id": "61338c180a1abc007efdf4b3",
+            "fullName": "Test User",
+            "email": "testuser2@example.com",
+            "phone": "09099199199199",
+            "password": "$2a$10$4W0y/DL/90pmPeA5LvuThuLfqCdCvyEuEllqObJFoMNWXvwCASK46",
+            "sex": "female",
+            "age": 19,
+            "isAdmin": true,
+            "date": "2021-09-04T15:09:12.791Z",
+            "__v": 0
+        },
+        {
+            "_id": "6134a99dde9f5c007e56918e",
+            "fullName": "Testing user",
+            "email": "testinguser@abc.com",
+            "phone": "009900990901",
+            "password": "$2a$10$VZBF2EvEC7fSv72P08yOvu8jMr.0/KlviphAgkEJJcJLfJL1Li9la",
+            "sex": "male",
+            "age": 19,
+            "isAdmin": false,
+            "date": "2021-09-05T11:27:25.620Z",
+            "__v": 0
+        },
+        {
+            "_id": "613511e7c095a6007ea04372",
+            "fullName": "Michael Phelps",
+            "email": "michaelphelps@gmail.com",
+            "phone": "09099119911",
+            "password": "$2a$10$Ft0HyJVkA.ZVA8t6zwsnDuwYqtlCSUX9g4lnt2L0FbxDcw0xbWFqe",
+            "sex": "male",
+            "age": 19,
+            "isAdmin": true,
+            "date": "2021-09-05T18:52:23.305Z",
+            "__v": 0
+        },
+        {
+            "_id": "6146695ba17040007ec52415",
+            "fullName": "main test",
+            "email": "main@test.com",
+            "phone": "08105678910",
+            "password": "$2a$10$mBlg2tsu2tl3iZC2quMYmeI4Dvs7rGnEISpMdSQROSaww7nbvrLcW",
+            "sex": "male",
+            "age": 12,
+            "date": "2021-09-18T22:34:03.765Z",
+            "__v": 0
+        },
+        {
+            "_id": "61466fd3a17040007ec52418",
+            "fullName": "big boy",
+            "email": "bigboy@email.com",
+            "phone": "08105678910",
+            "password": "$2a$10$tp8YkvWJfIlokVBdjlscYOgc7nVJbUbsYO1Yz0kdapQIbXIm3wg4y",
+            "sex": "male",
+            "age": 12,
+            "date": "2021-09-18T23:01:39.408Z",
+            "__v": 0
+        },
+        {
+            "_id": "6146a88ca8f997007e59c94f",
+            "fullName": "Amara Chi",
+            "email": "amara@gmail.com",
+            "phone": "09024323212",
+            "password": "$2a$10$hgLozp8wCZWaYjwD35wF1uIWO1jEkdgwOw5VO1q5AGSGGL.Rgergi",
+            "sex": "male",
+            "age": 23,
+            "isAdmin": false,
+            "date": "2021-09-19T03:03:40.360Z",
+            "__v": 0
+        },
+        {
+            "_id": "6146ac86a8f997007e59c952",
+            "fullName": "Pro Mis",
+            "email": "pro@gmail.com",
+            "phone": "09023323212",
+            "password": "$2a$10$efB4qIM5zGxR.I4yJaOzLuJw0WFXBHFl8QpakhisMV5c9j6cDKWJ6",
+            "sex": "female",
+            "age": 23,
+            "isAdmin": true,
+            "date": "2021-09-19T03:20:38.024Z",
+            "__v": 0
+        },
+        {
+            "_id": "61471e9ffef072007eb3ed3c",
+            "fullName": "Ama Mis",
+            "email": "ama@gmail.com",
+            "phone": "09022323212",
+            "password": "$2a$10$9fmZuiiCNvrA.KDPCd11Ju8UVkDCPR/shAEXEYrjxzYJWSv6ZdBZ6",
+            "sex": "female",
+            "age": 25,
+            "isAdmin": false,
+            "date": "2021-09-19T11:27:27.101Z",
+            "__v": 0
+        },
+        {
+            "_id": "61472221fef072007eb3ed41",
+            "fullName": "Maky B",
+            "email": "maky@gmail.com",
+            "phone": "09087878787",
+            "password": "$2a$10$9o6CPmO.Ro7Rm1IG0WFqTe86U6HR602WHDXkASELT3LjVV3U/tYqy",
+            "sex": "female",
+            "age": 22,
+            "isAdmin": true,
+            "date": "2021-09-19T11:42:25.399Z",
+            "__v": 0
+        }
+    ]
+}
