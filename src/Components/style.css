@@ -306,6 +306,11 @@
   td p {
     cursor: pointer;
   }
+  @media screen and (max-width: 520px) {
+    .hide{
+        opacity: 1;
+    }
+  }
 
     
     
