@@ -1,13 +1,22 @@
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../hooks/AuthContext";
 import "./style.css";
 
-function Nav({ logout }) {
+function Nav() {
+  const { user, logout} = useContext(AuthContext)
+
+  useEffect(() => {
+    
+  }, [user]);
+
   return (
     <div className="Nav">
       <div className="left">
         <Link to="/">
         <h1>Home</h1>
         </Link>
+        <h2>{user && `Welcome ${user.email}`}</h2>
       </div>
       <div className="right">
         <Link to="/addUser">

@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../hooks/AuthContext";
 
-function Users({ users, deleteUser }) {
+function Users() {
+  const { users, deleteUser, checkUser, togglePopup, popup } =
+    useContext(AuthContext);
   const [hide, setHide] = useState(true);
+
+  useEffect(() => {
+    checkUser();
+  }, []);
+
+  useEffect(() => {
+    console.log(popup);
+  }, [popup]);
 
   return (
     <div className="Cover">
@@ -14,7 +25,7 @@ function Users({ users, deleteUser }) {
             </div>
 
             {!users ? (
-              <h2>Loading users</h2>
+              <h2>Loading users...</h2>
             ) : (
               <table>
                 <thead>
@@ -54,7 +65,7 @@ function Users({ users, deleteUser }) {
                               </Link>
                             </p>
                           </td>
-                          <td>
+                          {/* <td>
                             <p className={hide && "hide"}>
                               <Link
                                 to={{
@@ -72,13 +83,15 @@ function Users({ users, deleteUser }) {
                           <td>
                             <p
                               onClick={() => {
-                                deleteUser(`/api/user/${user.id}`);
+                                togglePopup();
+                                // deleteUser(`/api/user/${user.id}`);
                               }}
                               className={hide && "hide"}
                             >
                               <i className="fa fa-trash" aria-hidden="true"></i>
                             </p>
-                          </td>
+                          </td> */}
+                          {/* {popup && <Popup user={user} />} */}
                         </tr>
                       );
                     })}
@@ -86,6 +99,9 @@ function Users({ users, deleteUser }) {
               </table>
             )}
           </div>
+          {
+            // popup && <Popup />
+          }
         </div>
       </div>
     </div>

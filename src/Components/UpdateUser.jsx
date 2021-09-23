@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
+import { AuthContext } from "../hooks/AuthContext";
 
-function UpdateUser({ updateUser }) {
+function UpdateUser() {
+  const {updateUser} = useContext(AuthContext)
   const [user, setUser] = useState(null);
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");

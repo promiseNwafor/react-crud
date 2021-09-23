@@ -1,15 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../hooks/AuthContext";
+import Popup from "./Popup";
 
-function User({ deleteUser }) {
+function User() {
+  const { popup, togglePopup } = useContext(AuthContext);
   const [user, setUser] = useState(null);
 
   const location = useLocation();
 
   useEffect(() => {
     setUser(location.state.user);
-  }, [location.state.user]);
+  }, [user]);
 
   return (
     <div className="Cover">
@@ -45,13 +48,7 @@ function User({ deleteUser }) {
               </tbody>
             </table>
             <div className="sec">
-              <p
-                onClick={() => {
-                  deleteUser(`/api/user/${user.id}`);
-                }}
-              >
-                Delete user
-              </p>
+              <p onClick={() => togglePopup()}>Delete user</p>
               <p>
                 <Link
                   to={{
@@ -63,6 +60,7 @@ function User({ deleteUser }) {
                 </Link>
               </p>
             </div>
+              {popup && <Popup user={user} />}
           </div>
         </div>
       </div>

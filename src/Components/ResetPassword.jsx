@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../hooks/AuthContext";
 
-function ResetPassword({ apiFetch }) {
+function ResetPassword() {
+  const {apiFetch} = useContext(AuthContext)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(null);
   const [passwordShown, setPasswordShown] = useState(false);
